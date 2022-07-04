@@ -28,7 +28,7 @@ func Setup() error {
 
 // GET will be called in main.go for GET requests
 func GET(ctx context.Context, output http.ResponseWriter, input *http.Request) {
-	gcs.Read(ctx, output, input, LoggingOnly)
+	gcs.Read(ctx, output, input, ZippingProxy)
 	//gcs.ReadWithCache(ctx, output, input, CacheMedia, cacheGetter, LoggingOnly)
 }
 
